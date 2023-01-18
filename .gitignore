@@ -32,3 +32,4 @@
 
 # Ignore Packages Dependencies
 /node_modules
+package-lock.json

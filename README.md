@@ -91,7 +91,7 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## ⭐️ Show your support <a name="support"></a>
+## Show your support <a name="support"></a>
 
 If you like this project give it a star!
 
