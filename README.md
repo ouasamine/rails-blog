@@ -37,7 +37,9 @@
 
 ### Key Features
 
-- **_Coming soon!_**
+- Create posts
+- comment on posts
+- like posts
 
 ## Getting Started 
 
@@ -79,7 +81,7 @@ In the project directory, you can run:
 
 ## Future Feature
 
-- **_Coming soon!_**
+- build UI
 
 ## Contributing 
 
