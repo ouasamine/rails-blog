@@ -1,10 +1,3 @@
-<div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-</div>
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#[project])
@@ -19,6 +12,7 @@
 - [👥 Authors](#author)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgments)
 - [📝 License](#license)
 
@@ -93,6 +87,9 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project give it a star!
 
 ## Acknowledgments 
 
