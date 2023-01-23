@@ -6,6 +6,6 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: 'author_id'
 
   def latest_posts
-    Post.where(author: self).limit(3)
+    post.last(3)
   end
 end
