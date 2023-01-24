@@ -70,3 +70,5 @@ end
 group :test do
   gem 'rspec-rails'
 end
+
+gem "rails-controller-testing", "~> 1.0"
