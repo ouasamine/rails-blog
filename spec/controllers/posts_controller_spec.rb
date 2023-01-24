@@ -13,7 +13,7 @@ RSpec.describe 'posts handling', type: :request do
 
   it '/ page body should include given text' do
     get '/users/:id/posts'
-    expect(response.body).to include("Here is a list of posts for agiven user")
+    expect(response.body).to include('Here is a list of posts for agiven user')
   end
 
   it '/:id response status should be ok' do
@@ -28,6 +28,6 @@ RSpec.describe 'posts handling', type: :request do
 
   it '/:id page body should include given text' do
     get '/users/:id/posts/:id'
-    expect(response.body).to include("Here is a single post of a given user")
+    expect(response.body).to include('Here is a single post of a given user')
   end
 end

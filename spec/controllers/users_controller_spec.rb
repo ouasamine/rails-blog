@@ -13,7 +13,7 @@ RSpec.describe 'users handling', type: :request do
 
   it '/ page body should include given text' do
     get '/users'
-    expect(response.body).to include("Here is a list of users")
+    expect(response.body).to include('Here is a list of users')
   end
 
   it '/:id response status should be ok' do
@@ -25,9 +25,9 @@ RSpec.describe 'users handling', type: :request do
     get '/users/:id'
     expect(response).to render_template(:show)
   end
-  
+
   it '/:id page body should include given text' do
     get '/users/:id'
-    expect(response.body).to include("Here is details of a given user")
+    expect(response.body).to include('Here is details of a given user')
   end
 end
