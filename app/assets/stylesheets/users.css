@@ -1,11 +1,13 @@
 :root {
   --bc: #000;
 }
+
 .box {
   width: 500px;
   margin: 10px 0;
   border: 1px solid  var(--bc);
 }
+
 .user-card {
   width: 500px;
   display: flex;
