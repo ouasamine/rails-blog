@@ -1,1 +1,18 @@
 <h1>Here is a single post of a given user</h1>
+<div>
+  <h2>
+    <%= @single_post.title %> by <%= @single_post.author.name %>
+  </h2>
+  <span>
+    Comments: <%= @single_post.comments_counter %>
+    Likes: <%= @single_post.likes_counter %>
+  </span>
+  <p>
+    <%= @single_post.text %>
+  </p>
+  <div>
+    <% @post_comments.each do |comment| %>
+      <span><%= comment.author.name %>: <%= comment.text %></span> 
+    <% end %>
+  </div>
+</div>
