@@ -4,8 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    if params[:id] == '1'
-      @greetings = 'User number 1'
-    end
+    @single_user = User.find(params[:id].to_i)
+    @user_posts = @single_user.latest_posts
   end
 end

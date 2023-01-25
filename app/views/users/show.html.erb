@@ -1,2 +1,16 @@
-<h1>Here is details of a given user</h1>
-<%= @greetings %>
+<h1>Here is details of the user</h1>
+User Name: <%= @single_user.name %> | Number Of Posts: <%= @single_user.posts_counter %>
+
+<h2>Bio:</h2>
+<p>
+  <%= @single_user.bio %>
+</p>
+
+<div>
+  <% @user_posts.each do |post| %>
+    Post Title: <%= post.title %>
+    <p><%= post.text %></p>
+    Likes: <%= post.likes_counter %>
+    Comments: <%= post.comments_counter %>
+  <% end %>
+</div>
