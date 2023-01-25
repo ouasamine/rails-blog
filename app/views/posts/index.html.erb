@@ -1,6 +1,6 @@
-<div class="usr-card">
-  <div class="img-plh"></div>
-  <div class="usr-detls">
+<div class="user-card">
+  <div class="img-plch"></div>
+  <div class="user-detls">
     <h2><%= @single_user.name %></h2> 
     <span>Number Of Posts: <%= @single_user.posts_counter %></span>
   </div>
@@ -8,8 +8,8 @@
 
 <div>
   <% @user_posts.each do |post| %>
-    <div class="usr-post-blck">
-      <div class="post-card">
+    <div class="user-post-blck">
+      <div class="post-card box">
         <h3><%= post.title %></h3>
         <p><%= post.text %></p>
         <span>
@@ -17,7 +17,7 @@
           Likes: <%= post.likes_counter %>
         </span>
       </div>
-      <div class="post-cmnts">
+      <div class="post-cmnts-block box">
         <% post.latest_comments.each do |comment| %>
           <span><%= comment.author.name %>: <%= comment.text%></span>
         <% end %>

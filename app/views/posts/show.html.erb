@@ -1,4 +1,4 @@
-<div class="post-body">
+<div class="post-body box">
   <h2>
     <%= @single_post.title %> by <%= @single_post.author.name %>
   </h2>
@@ -11,7 +11,7 @@
   </p>
 </div>
 
-<div class="post-cmnts">
+<div class="post-cmnts-block box">
   <% @post_comments.each do |comment| %>
     <span><%= comment.author.name %>: <%= comment.text %></span> 
   <% end %>
