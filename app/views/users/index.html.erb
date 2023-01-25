@@ -1,3 +1,9 @@
 <% @users.each do |user| %>
-User Name: <%= user.name %> | Number Of Posts: <%= user.posts_counter %> <br>
+  <div class="usr-card">
+    <div class="img-plh"></div>
+    <div class="user-detls">
+      <h2><%= user.name %></h2> 
+      <span>Number Of Posts: <%= user.posts_counter %></span>
+    </div>
+  </div>
 <% end %>

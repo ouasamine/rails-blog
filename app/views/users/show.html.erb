@@ -1,15 +1,27 @@
-User Name: <%= @single_user.name %> | Number Of Posts: <%= @single_user.posts_counter %>
+<div class="usr-card">
+  <div class="img-plh"></div>
+  <div class="usr-detls">
+    <h2><%= @single_user.name %></h2> 
+    <span>Number Of Posts: <%= @single_user.posts_counter %></span>
+  </div>
+</div>
 
-<h2>Bio:</h2>
-<p>
-  <%= @single_user.bio %>
-</p>
+<div class="usr-bio">
+  <h3>Bio:</h3>
+  <p>
+    <%= @single_user.bio %>
+  </p>
+</div>
 
 <div>
   <% @user_posts.each do |post| %>
-    Post Title: <%= post.title %>
-    <p><%= post.text %></p>
-    Likes: <%= post.likes_counter %>
-    Comments: <%= post.comments_counter %>
+    <div class="post-card">
+      <h3><%= post.title %></h3>
+      <p><%= post.text %></p>
+      <span>
+        Comments: <%= post.comments_counter %>
+        Likes: <%= post.likes_counter %>
+      </span>
+    </div>
   <% end %>
 </div>
