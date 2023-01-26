@@ -8,6 +8,13 @@
   border: 1px solid  var(--bc);
 }
 
+.btn {
+  padding: 5px 10px;
+  border: 1px solid var(--bc);
+  text-decoration: none;
+  color: var(--bc);
+}
+
 .user-card {
   width: 500px;
   display: flex;
