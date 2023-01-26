@@ -1,1 +1,29 @@
-<h1>Here is details of a given user</h1>
+<div class="user-card">
+  <div class="img-plch"></div>
+  <div class="user-detls">
+    <h2><%= @single_user.name %></h2> 
+    <span>Number Of Posts: <%= @single_user.posts_counter %></span>
+  </div>
+</div>
+
+<div class="user-bio">
+  <h3>Bio:</h3>
+  <p>
+    <%= @single_user.bio %>
+  </p>
+</div>
+
+<div>
+  <% @user_posts.each do |post| %>
+    <div class="post-card box">
+      <h3><%= post.title %></h3>
+      <p><%= post.text %></p>
+      <span>
+        Comments: <%= post.comments_counter %>
+        Likes: <%= post.likes_counter %>
+      </span>
+    </div>
+  <% end %>
+</div>
+
+<a class="btn" href="/users/<%= @single_user.id %>/posts">See all posts</a>

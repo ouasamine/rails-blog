@@ -1,0 +1,31 @@
+.post-card {
+  margin: 5px 0;
+  padding: 5px;
+  position: relative;
+}
+
+.post-card span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.post-cmnts-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-cmnts-block span {
+  padding: 5px;
+}
+
+.post-body {
+  padding: 5px;
+  position: relative;
+}
+
+.post-body span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

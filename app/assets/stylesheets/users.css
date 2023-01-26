@@ -1,0 +1,57 @@
+:root {
+  --bc: #000;
+}
+
+.box {
+  width: 500px;
+  margin: 10px 0;
+  border: 1px solid  var(--bc);
+}
+
+.btn {
+  padding: 5px 10px;
+  border: 1px solid var(--bc);
+  text-decoration: none;
+  color: var(--bc);
+}
+
+.user-card {
+  width: 500px;
+  display: flex;
+  margin: 5px 0;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--bc);
+}
+
+.img-plch {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--bc);
+}
+
+.img-plch::after {
+  content: "image";
+}
+
+.user-detls {
+  width: 100%;
+  padding: 0 5px;
+  position: relative;
+  border: 1px solid var(--bc);
+}
+
+.user-detls span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.user-bio {
+  width: 500px;
+  padding: 5px;
+  border: 1px solid var(--bc);
+}
