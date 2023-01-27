@@ -1,3 +1,4 @@
+<%= flash[:success] %>
 <div class="post-body box">
   <h2>
     <%= @single_post.title %> by <%= @single_post.author.name %>
@@ -16,3 +17,10 @@
     <span><%= comment.author.name %>: <%= comment.text %></span> 
   <% end %>
 </div>
+
+<%= form_with model: @like, url: likes_path do |f| %>
+  <%= f.hidden_field :post_id, value: @single_post.id %>
+  <%= f.submit "Like" %>
+<% end %>
+
+<%= flash[:error] %>
