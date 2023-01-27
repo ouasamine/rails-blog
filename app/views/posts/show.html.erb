@@ -20,7 +20,7 @@
 
 <%= form_with model: @like, url: likes_path do |f| %>
   <%= f.hidden_field :post_id, value: @single_post.id %>
-  <%= f.submit %>
+  <%= f.submit "Like" %>
 <% end %>
 
 <%= flash[:error] %>

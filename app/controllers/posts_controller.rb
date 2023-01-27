@@ -15,12 +15,13 @@ class PostsController < ApplicationController
 
   def create
     @new_post = params.require(:post).permit(:title, :text)
-    @post = Post.new(author: current_user, title: @new_post[:title], text: @new_post[:text], comments_counter: 0, likes_counter: 0)
+    @post = Post.new(author: current_user, title: @new_post[:title], text: @new_post[:text], comments_counter: 0,
+                     likes_counter: 0)
     if @post.save
-      flash[:success] = "Post created succefully!"
+      flash[:success] = 'Post created succefully!'
       redirect_to users_path
-    else   
+    else
       flash.now[:error] = "The post couldn't be created!"
-    end  
+    end
   end
 end
