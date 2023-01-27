@@ -8,4 +8,8 @@ class PostsController < ApplicationController
     @single_post = Post.find(params[:id].to_i)
     @post_comments = Comment.where(post: @single_post)
   end
+
+  def new
+
+  end
 end
