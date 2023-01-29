@@ -5,8 +5,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @single_post = Post.find(params[:id].to_i)
-    @post_comments = Comment.where(post: @single_post)
+    @current_post = Post.find(params[:id].to_i)
+    @post_comments = Comment.where(post: @current_post)
+    @comment = Comment.new
   end
 
   def new
@@ -14,8 +15,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @new_post = params.require(:post).permit(:title, :text)
-    @post = Post.new(author: current_user, title: @new_post[:title], text: @new_post[:text], comments_counter: 0,
+    @post_prams = params.require(:post).permit(:title, :text)
+    @post = Post.new(author: current_user, title: @post_prams[:title], text: @post_prams[:text], comments_counter: 0,
                      likes_counter: 0)
     if @post.save
       flash[:success] = 'Post created succefully!'

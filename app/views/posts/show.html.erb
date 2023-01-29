@@ -1,14 +1,14 @@
 <%= flash[:success] %>
 <div class="post-body box">
   <h2>
-    <%= @single_post.title %> by <%= @single_post.author.name %>
+    <%= @current_post.title %> by <%= @current_post.author.name %>
   </h2>
   <span>
-    Comments: <%= @single_post.comments_counter %>
-    Likes: <%= @single_post.likes_counter %>
+    Comments: <%= @current_post.comments_counter %>
+    Likes: <%= @current_post.likes_counter %>
   </span>
   <p>
-    <%= @single_post.text %>
+    <%= @current_post.text %>
   </p>
 </div>
 
@@ -18,9 +18,16 @@
   <% end %>
 </div>
 
-<%= form_with model: @like, url: likes_path do |f| %>
-  <%= f.hidden_field :post_id, value: @single_post.id %>
+<%= form_with url: likes_path do |f| %>
+  <%= f.hidden_field :post_id, value: @current_post.id %>
   <%= f.submit "Like" %>
 <% end %>
 
-<%= flash[:error] %>
+<h2>Add a comment</h2> <br>
+
+<%= form_with model: @comment, url: post_comments_path(@current_post) do |f| %>
+<%= f.text_area :text %><br>
+<%= f.submit "Add comment" %>
+<% end %>
+
+<%= flash.now[:error] %>

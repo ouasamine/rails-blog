@@ -4,10 +4,9 @@ class LikesController < ApplicationController
     @new_like = Like.new(author: current_user, post: @current_post)
     if @new_like.save
       flash[:success] = 'Post liked succefully!'
+      redirect_to post_path(@current_post)
     else
       flash.now[:error] = 'Something ent wrong!'
     end
-    redirect_to users_path
-    nil
   end
 end
