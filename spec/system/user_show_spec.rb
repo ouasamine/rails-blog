@@ -34,8 +34,8 @@ RSpec.describe 'User show page', type: :system do
   it 'should show the user last 3 posts' do
     visit user_path(@user.id)
     expect(page).to have_content @post.title.to_s
-    expect(page).to have_content @post_2.title.to_s
-    expect(page).to have_content @post_3.title.to_s
+    expect(page).to have_content @post2.title.to_s
+    expect(page).to have_content @post3.title.to_s
   end
 
   it 'should show see all posts button' do
