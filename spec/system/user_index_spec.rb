@@ -1,12 +1,12 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe 'Users index page', type: :system do
-  before do 
-    @user = User.create(name: "Lilly", posts_counter: 0)
+  before do
+    @user = User.create(name: 'Lilly', posts_counter: 0)
   end
-  it "should show users names" do
+  it 'should show users names' do
     visit users_path
-    expect(page).to have_text("Lilly")
+    expect(page).to have_text('Lilly')
   end
 
   it 'should show users images' do
@@ -21,7 +21,7 @@ RSpec.describe 'Users index page', type: :system do
 
   it 'should show users names' do
     visit users_path
-    click_on "#{@user.name}"
+    click_on @user.name.to_s
     expect(page).to have_current_path user_path(@user.id)
   end
 end

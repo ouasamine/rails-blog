@@ -10,7 +10,7 @@ RSpec.describe 'Post show page', type: :system do
 
   it 'should show the post title' do
     visit post_path(@post.id)
-    expect(page).to have_text "#{@post.title}"
+    expect(page).to have_text @post.title.to_s
   end
 
   it 'should show the author name' do
@@ -30,16 +30,16 @@ RSpec.describe 'Post show page', type: :system do
 
   it 'should show the post body' do
     visit post_path(@post.id)
-    expect(page).to have_content "#{@post.text}"
+    expect(page).to have_content @post.text.to_s
   end
 
   it 'should show comments authors names' do
     visit post_path(@post.id)
-    expect(find('div.post-cmnts-block')).to have_text "#{@comment.author.name}"
+    expect(find('div.post-cmnts-block')).to have_text @comment.author.name.to_s
   end
 
   it 'should show comments bodies' do
     visit post_path(@post.id)
-    expect(find('div.post-cmnts-block')).to have_text "#{@comment.text}"
+    expect(find('div.post-cmnts-block')).to have_text @comment.text.to_s
   end
 end
