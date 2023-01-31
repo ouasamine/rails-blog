@@ -9,14 +9,14 @@
 <div>
   <% @user_posts.each do |post| %>
     <div class="user-post-blck">
-      <div class="post-card box">
+      <a class="post-card box" href="<%= post_path(post)%>">
         <h3><%= post.title %></h3>
         <p><%= post.text %></p>
         <span>
           Comments: <%= post.comments_counter %>
           Likes: <%= post.likes_counter %>
         </span>
-      </div>
+      </a>
       <div class="post-cmnts-block box">
         <% post.latest_comments.each do |comment| %>
           <span><%= comment.author.name %>: <%= comment.text%></span>
@@ -25,6 +25,7 @@
     </div>
   <% end %>
 </div>
+<a href="#" class="btn">Next page</a>
 
 
 
