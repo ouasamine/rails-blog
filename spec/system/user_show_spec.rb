@@ -40,13 +40,13 @@ RSpec.describe 'User show page', type: :system do
     expect(page).to have_css('a.btn', text: 'See all posts')
   end
 
-  it 'should redirect to post show page when clicking on a user post should ' do
+  it 'should redirect to post show page when clicking on a user post' do
     visit user_path(@user.id)
     click_on "#{@post.title}"
     expect(page).to have_current_path post_path(@post.id)
   end
 
-  it 'should redirect to posts index page when clicking see all posts button ' do
+  it 'should redirect to posts index page when clicking see all posts button' do
     visit user_path(@user.id)
     click_on 'See all posts'
     expect(page).to have_current_path user_posts_path(@user.id)
