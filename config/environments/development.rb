@@ -37,9 +37,9 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -70,4 +70,8 @@ Rails.application.configure do
 
   # Defining the default host, required by the devise gem
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # letter_opener confiduration
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
 end
