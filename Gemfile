@@ -68,6 +68,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Local mailer
+  gem 'letter_opener'
 end
 
 group :test do
@@ -76,3 +79,5 @@ group :test do
 end
 
 gem 'rails-controller-testing', '~> 1.0'
+
+gem 'devise', '~> 4.8'

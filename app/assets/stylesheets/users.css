@@ -2,6 +2,16 @@
   --bc: #000;
 }
 
+#nav-links {
+  width: fit-content;
+  margin: auto auto;
+}
+
+#nav-links button {
+  padding: 5px 25px;
+  cursor: pointer;
+}
+
 .box {
   width: 500px;
   margin: 10px 0;
@@ -54,4 +64,33 @@
   width: 500px;
   padding: 5px;
   border: 1px solid var(--bc);
+}
+
+.form-box {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto auto;
+  padding: 25px;
+  border: 1px solid var(--bc);
+  text-align: center;
+}
+
+.form-box .field {
+  margin: 15px 0;
+}
+
+.form-box input[type=email],
+.form-box input[type=password],
+.form-box input[type=text] {
+  width: 300px;
+  padding: 5px;
+  text-align: left;
+}
+
+.form-box input[type=submit] {
+  margin: 15px 0;
+  padding: 5px 20px;
+  cursor: pointer;
 }
