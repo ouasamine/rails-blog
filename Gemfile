@@ -76,3 +76,5 @@ group :test do
 end
 
 gem 'rails-controller-testing', '~> 1.0'
+
+gem "devise", "~> 4.8"
