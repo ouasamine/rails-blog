@@ -1,4 +1,5 @@
-<%= flash[:success] %>
+<%= alert %>
+<%= notice %>
 <% @users.each do |user| %>
   <a class="user-card" href="/users/<%= user.id%>">
     <div class="img-plch"></div>
@@ -8,3 +9,4 @@
     </div>
   </a>
 <% end %>
+
