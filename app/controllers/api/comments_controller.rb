@@ -4,6 +4,13 @@ class Api::CommentsController < Api::ApplicationController
   end
 
   def create
-    
+    @new_comment = Comment.new(author_id: params[:user_id].to_i, post_id: params[:post_id].to_i,
+                                text: params[:comment_text])
+
+    if @new_comment.save  
+      render json: "Comment created successfully"
+    else
+      render json: current_user
+    end
   end
 end
