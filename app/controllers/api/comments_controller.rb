@@ -10,7 +10,7 @@ class Api::CommentsController < Api::ApplicationController
     if @new_comment.save  
       render json: "Comment created successfully"
     else
-      render json: current_user
+      render json: "Failed!"
     end
   end
 end
