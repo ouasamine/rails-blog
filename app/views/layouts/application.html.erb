@@ -13,7 +13,7 @@
   <body>
     <nav id="nav-links">
       <%= button_to "Sign out", destroy_user_session_path, method: :delete if user_signed_in? %>
-      <%= button_to "Sign in", new_user_session_path, method: :get %>
+      <%= button_to "Sign in", new_user_session_path, method: :get unless user_signed_in?%>
     </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
