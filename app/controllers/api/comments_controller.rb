@@ -5,12 +5,12 @@ class Api::CommentsController < Api::ApplicationController
 
   def create
     @new_comment = Comment.new(author_id: params[:user_id].to_i, post_id: params[:post_id].to_i,
-                                text: params[:comment_text])
+                               text: params[:comment_text])
 
-    if @new_comment.save  
-      render json: "Comment created successfully"
+    if @new_comment.save
+      render json: 'Comment created successfully'
     else
-      render json: "Failed!"
+      render json: 'Failed!'
     end
   end
 end
