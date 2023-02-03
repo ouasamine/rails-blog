@@ -81,3 +81,5 @@ end
 gem 'rails-controller-testing', '~> 1.0'
 
 gem 'devise', '~> 4.8'
+
+gem "rswag", "~> 2.8"
